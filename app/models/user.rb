@@ -10,6 +10,7 @@ class User < ApplicationRecord
 
   validates :username, presence: true, length: { minimum: 2 }
 
+  has_many :posts, dependent: :destroy
   attachment :profile_image
 
   # nameを利用してログイン
