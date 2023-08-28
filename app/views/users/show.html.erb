@@ -74,7 +74,7 @@
                       </span>
                       投稿を編集する
                     <% end %>                   
-                    <%= link_to post_path(post), method: :delete, date: {confirm: "削除しますか?"}, class: "panel-block" do %>
+                    <%= link_to post_path(post), data: { turbo_method: "delete", turbo_confirm: "削除してよろしいですか？" }, class: "panel-block" do %>
                       <span class="panel-icon">
                         <i class="fas fa-trash"></i>
                       </span>
